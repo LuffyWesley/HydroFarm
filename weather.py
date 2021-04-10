@@ -89,13 +89,17 @@ while running:
         # Temperature is measured in Kelvin
         temperature = item['main']['temp']
 
+        # Humidity
+        humidity = item['main']['humidity']
+
         # Weather condition
         description = item['weather'][0]['description']
 
-        # Prints the description as well as the temperature in Celcius and Farenheit
+        # Prints the description as well as the temperature in Celcius and Farenheit and humidity
         print('Weather condition: %s' % description)
         print('Celcius: {:.2f}'.format(temperature - 273.15))
         print('Farenheit: %.2f' % (temperature * 9/5 - 459.67))
+        print('Humidity: %s' % humidity)
 
     # Prints a calendar of the current month
     calendar = calendar.month(int(year), int(month))
