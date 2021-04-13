@@ -12,9 +12,8 @@ def index(request):
 
         data = {
             "country_code": str(list_of_data['sys']['country']),
-            "coordinate": str(list_of_data['coord']['lon']) + ', '
-            + str(list_of_data['coord']['lat']),
-
+            "coordinate": str(list_of_data['coord']['lon']) + ', ' + str(list_of_data['coord']['lat']),
+            "name": str(list_of_data['name']),
             "temp": str(list_of_data['main']['temp']) + ' °C',
             "pressure": str(list_of_data['main']['pressure']) + ' hPa',
             "humidity": str(list_of_data['main']['humidity']) + ' %',
